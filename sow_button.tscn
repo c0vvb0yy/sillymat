@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpp72lm4s3y2o"]
+
+[ext_resource type="Texture2D" uid="uid://bjtgowhskpjlg" path="res://sprites/sow_action.png" id="1_np3qt"]
+[ext_resource type="Script" path="res://sow_button.gd" id="2_rkku8"]
+
+[node name="SowButton" type="Button"]
+offset_right = 67.039
+offset_bottom = 31.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.972549, 0.435294, 0.635294, 1)
+icon = ExtResource("1_np3qt")
+icon_alignment = 1
+script = ExtResource("2_rkku8")

@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://cd12ys7dhyr5"]
+
+[ext_resource type="Script" path="res://cancel.gd" id="1_a0cms"]
+[ext_resource type="Texture2D" uid="uid://xe0lbnujhuip" path="res://sprites/cancel_action.png" id="1_ua3eb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vats7"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Cancel" type="Button"]
+offset_right = 136.0
+offset_bottom = 136.0
+mouse_default_cursor_shape = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_vats7")
+icon = ExtResource("1_ua3eb")
+script = ExtResource("1_a0cms")

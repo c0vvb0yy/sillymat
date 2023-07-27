@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl1lhwwyqy56l"]
+
+[ext_resource type="Texture2D" uid="uid://ba5lx3e75ttou" path="res://sprites/stockpile_action.png" id="1_1hnga"]
+[ext_resource type="Script" path="res://stockpile_button.gd" id="2_12g4e"]
+
+[node name="StockpileButton" type="Button"]
+offset_right = 78.0
+offset_bottom = 31.0
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.933333, 0.384314, 0.580392, 1)
+icon = ExtResource("1_1hnga")
+script = ExtResource("2_12g4e")

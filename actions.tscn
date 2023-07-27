@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://s0lycmqju0l7"]
+
+[ext_resource type="Script" path="res://Actions.gd" id="1_d832n"]
+
+[node name="Actions" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_d832n")
+radius = 250

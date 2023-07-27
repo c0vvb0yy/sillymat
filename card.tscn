@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://q2qi1mjbiihu"]
+
+[ext_resource type="Texture2D" uid="uid://c31hjw1et44kd" path="res://sprites/autumn_suit.png" id="2_bogo8"]
+[ext_resource type="Texture2D" uid="uid://c01whowyruc6x" path="res://sprites/summer_suit.png" id="3_vamh7"]
+[ext_resource type="Texture2D" uid="uid://djnvju4csltq8" path="res://sprites/spring_suit.png" id="4_08kmi"]
+[ext_resource type="Texture2D" uid="uid://dao1gisua7c3w" path="res://sprites/winter_suit.png" id="5_a8sr7"]
+[ext_resource type="Texture2D" uid="uid://cytxsrw1n7mhh" path="res://sprites/star_suit.png" id="6_px6va"]
+[ext_resource type="Texture2D" uid="uid://m3cdauxcsv01" path="res://sprites/card.png" id="7_c5oui"]
+[ext_resource type="Script" path="res://CardVisuals.gd" id="8_k02f3"]
+
+[sub_resource type="SystemFont" id="SystemFont_ouovn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_btjlr"]
+font = SubResource("SystemFont_ouovn")
+font_size = 49
+font_color = Color(0, 0, 0, 1)
+
+[node name="Card" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("8_k02f3")
+suit_image = Array[Texture]([ExtResource("2_bogo8"), ExtResource("3_vamh7"), ExtResource("4_08kmi"), ExtResource("5_a8sr7"), ExtResource("6_px6va")])
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -126.0
+offset_top = -178.0
+offset_right = 124.0
+offset_bottom = 172.0
+texture = ExtResource("7_c5oui")
+
+[node name="Visuals" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -44.0
+offset_top = -44.0
+offset_right = -4.0
+offset_bottom = -4.0
+mouse_filter = 2
+
+[node name="Suit" type="TextureRect" parent="Visuals"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 108.0
+offset_bottom = 108.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_vamh7")
+
+[node name="Value1" type="Label" parent="Visuals"]
+layout_mode = 0
+offset_left = -74.0
+offset_top = -121.0
+offset_right = -18.0
+offset_bottom = -50.0
+text = "13"
+label_settings = SubResource("LabelSettings_btjlr")
+
+[node name="Value2" type="Label" parent="Visuals"]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 215.0
+offset_right = 222.0
+offset_bottom = 286.0
+rotation = 3.14159
+text = "13"
+label_settings = SubResource("LabelSettings_btjlr")

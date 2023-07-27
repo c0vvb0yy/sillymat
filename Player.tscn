@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://d26w0tafq1ysf"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_sw47l"]
+[ext_resource type="PackedScene" uid="uid://s0lycmqju0l7" path="res://actions.tscn" id="2_d4fc0"]
+
+[node name="Player" type="Control"]
+layout_mode = 3
+anchor_right = 0.244
+anchor_bottom = 0.342
+offset_right = -249.856
+offset_bottom = -350.208
+scale = Vector2(0.5, 0.5)
+mouse_filter = 1
+script = ExtResource("1_sw47l")
+
+[node name="Hand" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 150
+
+[node name="ActiveCard" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Actions" parent="." instance=ExtResource("2_d4fc0")]
+layout_mode = 1

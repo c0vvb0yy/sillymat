@@ -1,0 +1,113 @@
+[gd_scene load_steps=7 format=3 uid="uid://c2pa6obnidop4"]
+
+[ext_resource type="Texture2D" uid="uid://bsb8h1mewueod" path="res://board.png" id="1_unroa"]
+[ext_resource type="Texture2D" uid="uid://duyelp7qdsbtv" path="res://season_box.png" id="2_2yl4h"]
+[ext_resource type="PackedScene" uid="uid://d26w0tafq1ysf" path="res://Player.tscn" id="3_775df"]
+[ext_resource type="Script" path="res://Board.gd" id="4_lqee2"]
+[ext_resource type="Texture2D" uid="uid://bhtuqd88uq7vt" path="res://card_back.png" id="4_t87i7"]
+[ext_resource type="Script" path="res://DrawPile.gd" id="5_xfa02"]
+
+[node name="Game" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_unroa")
+
+[node name="Board" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("4_lqee2")
+
+[node name="Box" type="TextureRect" parent="Board"]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 145.0
+offset_right = 875.0
+offset_bottom = 864.0
+scale = Vector2(0.465, 0.465)
+pivot_offset = Vector2(363, 363)
+texture = ExtResource("2_2yl4h")
+
+[node name="DrawPile" type="TextureRect" parent="Board/Box"]
+layout_mode = 0
+offset_left = 255.473
+offset_top = 216.763
+offset_right = 505.473
+offset_bottom = 566.763
+scale = Vector2(0.855495, 0.796584)
+texture = ExtResource("4_t87i7")
+script = ExtResource("5_xfa02")
+
+[node name="LeftUp" type="HBoxContainer" parent="Board"]
+layout_mode = 0
+offset_left = 175.0
+offset_top = 376.0
+offset_right = 475.0
+offset_bottom = 416.0
+rotation = -0.785398
+scale = Vector2(0.5, 0.5)
+theme_override_constants/separation = 150
+
+[node name="RightUp" type="HBoxContainer" parent="Board"]
+layout_mode = 0
+offset_left = 655.0
+offset_top = 198.0
+offset_right = 955.0
+offset_bottom = 238.0
+rotation = 0.785398
+scale = Vector2(0.5, 0.5)
+theme_override_constants/separation = 150
+
+[node name="RightDown" type="HBoxContainer" parent="Board"]
+layout_mode = 0
+offset_left = 635.0
+offset_top = 785.0
+offset_right = 935.0
+offset_bottom = 825.0
+rotation = -0.785398
+scale = Vector2(0.5, 0.5)
+theme_override_constants/separation = 150
+
+[node name="LeftDown" type="HBoxContainer" parent="Board"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 642.0
+offset_right = 550.0
+offset_bottom = 682.0
+rotation = 0.785398
+scale = Vector2(0.5, 0.5)
+theme_override_constants/separation = 150
+
+[node name="Player" parent="." instance=ExtResource("3_775df")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+
+[node name="Hand" parent="Player" index="0"]
+offset_left = 754.0
+offset_top = 1852.0
+offset_right = 794.0
+offset_bottom = 1892.0
+
+[node name="Actions" parent="Player" index="1"]
+mouse_filter = 1
+
+[editable path="Player"]

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://diloru2mhylag"]
+
+[ext_resource type="Texture2D" uid="uid://bkmwwp114qi84" path="res://sprites/harvest_action.png" id="1_uer40"]
+[ext_resource type="Script" path="res://harvest_button.gd" id="2_7dp4y"]
+
+[node name="HarvestButton" type="Button"]
+offset_right = 67.039
+offset_bottom = 31.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.854902, 0.396078, 0.74902, 1)
+icon = ExtResource("1_uer40")
+script = ExtResource("2_7dp4y")

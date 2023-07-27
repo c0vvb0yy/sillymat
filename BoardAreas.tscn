@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://da4b5ogr1dmmw"]
+
+[sub_resource type="GDScript" id="GDScript_c6bfm"]
+script/source = "extends Area2D
+
+enum SEASONS {SPRING, SUMMER, AUTUMN, WINTER}
+enum QUADRANT {LEFTUP, RIGHTUP, RIGHTDOWN, LEFTDOWN}
+@export
+var active_season := SEASONS.SPRING
+@export
+var quadrant := QUADRANT.LEFTUP
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yovna"]
+size = Vector2(517, 510)
+
+[node name="LeftUp" type="Area2D"]
+position = Vector2(-258.5, -252)
+script = SubResource("GDScript_c6bfm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yovna")
